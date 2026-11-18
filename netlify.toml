@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Netlify serves the React/Vite frontend as a static site.
+# The Express + SQLite server in /server is NOT deployed by this file.
+# Configure a separately hosted API and VITE_API_BASE_URL before enabling accounts.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
